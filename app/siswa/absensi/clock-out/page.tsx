@@ -4,32 +4,32 @@ import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
-function IconArrowLeft({ className }: { className?: string }) {
+function IconArrowLeft({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M19 12H5M12 19l-7-7 7-7" />
     </svg>
   );
 }
 
-function IconCamera({ className }: { className?: string }) {
+function IconCamera({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
       <circle cx="12" cy="13" r="3" />
     </svg>
   );
 }
 
-function IconRotateCcw({ className }: { className?: string }) {
+function IconRotateCcw({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
       <path d="M3 3v5h5" />
     </svg>

@@ -4,32 +4,32 @@ import { useState, useRef, useEffect } from "react";
 import { supabase } from "@/lib/supabase";
 
 /* ─── Icons ─── */
-function IconCheck({ className }: { className?: string }) {
+function IconCheck({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M9 12l2 2 4-4m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
     </svg>
   );
 }
 
-function IconClock({ className }: { className?: string }) {
+function IconClock({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <circle cx="12" cy="12" r="10" />
       <polyline points="12 6 12 12 16 14" />
     </svg>
   );
 }
 
-function IconImage({ className }: { className?: string }) {
+function IconImage({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
       <circle cx="8.5" cy="8.5" r="1.5" />
       <polyline points="21 15 16 10 5 21" />
@@ -37,11 +37,11 @@ function IconImage({ className }: { className?: string }) {
   );
 }
 
-function IconX({ className }: { className?: string }) {
+function IconX({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M18 6 6 18" />
       <path d="m6 6 12 12" />
     </svg>
@@ -221,7 +221,7 @@ export default function SiswaAbsensiPage() {
           <div style={{ display: 'flex', gap: '12px' }}>
             <button
               onClick={handleClockIn}
-              disabled={hasClockIn}
+              disabled={!!hasClockIn}
               style={{
                 padding: '10px 20px',
                 background: hasClockIn ? '#d1d5db' : '#10b981',
@@ -238,7 +238,7 @@ export default function SiswaAbsensiPage() {
             </button>
             <button
               onClick={handleClockOut}
-              disabled={!hasClockIn || hasClockOut}
+              disabled={!(hasClockIn && !hasClockOut)}
               style={{
                 padding: '10px 20px',
                 background: (!hasClockIn || hasClockOut) ? '#d1d5db' : '#6366f1',

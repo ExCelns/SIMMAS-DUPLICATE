@@ -10,22 +10,22 @@ const supabase = createClient(
 );
 
 /* ─── Icons ─── */
-function IconMapPin({ className }: { className?: string }) {
+function IconMapPin({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
       <circle cx="12" cy="10" r="3" />
     </svg>
   );
 }
 
-function IconCalendar({ className }: { className?: string }) {
+function IconCalendar({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
       <line x1="16" y1="2" x2="16" y2="6" />
       <line x1="8" y1="2" x2="8" y2="6" />
@@ -34,11 +34,11 @@ function IconCalendar({ className }: { className?: string }) {
   );
 }
 
-function IconBuilding({ className }: { className?: string }) {
+function IconBuilding({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <rect width="16" height="20" x="4" y="2" rx="2" ry="2" />
       <path d="M9 22v-4h6v4" />
       <path d="M8 6h.01" />
@@ -54,44 +54,44 @@ function IconBuilding({ className }: { className?: string }) {
   );
 }
 
-function IconSearch({ className }: { className?: string }) {
+function IconSearch({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <circle cx="11" cy="11" r="8" />
       <path d="m21 21-4.3-4.3" />
     </svg>
   );
 }
 
-function IconPlus({ className }: { className?: string }) {
+function IconPlus({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M5 12h14" />
       <path d="M12 5v14" />
     </svg>
   );
 }
 
-function IconX({ className }: { className?: string }) {
+function IconX({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M18 6 6 18" />
       <path d="m6 6 12 12" />
     </svg>
   );
 }
 
-function IconUpload({ className }: { className?: string }) {
+function IconUpload({ className, style }: { className?: string; style?: React.CSSProperties }) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
       fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"
-      strokeLinejoin="round" className={className}>
+      strokeLinejoin="round" className={className} style={style}>
       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
       <polyline points="17 8 12 3 7 8" />
       <line x1="12" y1="3" x2="12" y2="15" />
